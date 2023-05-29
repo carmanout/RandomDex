@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    background-color: #FFCB05;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 800px;
+    border: 5px solid #3D7DCA;
+    background-color: #F7E7CE;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.column label, .column select {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #3D7DCA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: #2a5674;
+    color: white;
+}
+
+#tipos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#tipos div {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#resultados {
+    display: inline-block;
+}
+
+#resultados p {
+    display: inline-block;
+    background-color: #77DD77;
+    border-radius: 12px;
+    width: 47%;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Estilo personalizado para los checkboxes */
+#tipos input[type="checkbox"] {
+    display: none;
+}
+
+#tipos input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1);
+    border-width: 2px;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+#tipos input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3D7DCA;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+#tipos input[type="checkbox"]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 10px;
+    height: 15px;
+    border: solid #3D7DCA;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+#tipos input[type="checkbox"]:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+
+}
+
+#tipos input[type="checkbox"]:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+}
+/* Estilo personalizado para el elemento select */
+select {
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    color: #444;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;  /* Elimina la flecha predeterminada en IE */
+}
+
+select:hover {
+    border: 1px solid #b9b9b9;
+}
+
+select:focus {
+    border: 1px solid #5B98A6;
+}
+
+option:not([disabled]) {
+    color: #444;
+}
+
+option[disabled] {
+    color: #b8b8b8;
+}
+
+body {
+    font-size: 100%;
+}
+
+/* Media query para dispositivos con pantalla de hasta 600px de ancho */
+@media (max-width : 600px) {
+    
+    h1{
+        font-size: 500%;
+    }
+
+    .container{
+        min-height: 45vh;
+        font-size: 300%;
+    }
+
+
+    #tipos input[type="checkbox"] + label:before {
+
+        width: 50px;
+        height: 50px;
+
+    }
+    #tipos input[type="checkbox"] + label {
+
+        padding-bottom: 50px;
+        padding-right: 30px;
+        padding-top: 50px;
+    }
+
+    select{
+        width: 100%;
+        height: 100px;
+        font-size: 50px;
+        
+    }
+    select option:not(:checked) {
+        font-size: 25px !important;
+    }
+
+    select option:checked {
+        font-size: 25px !important;
+    }
+
+    button{
+        width: 45%;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    #tipos input[type="checkbox"]:checked + label:after {
+        width: 40px;
+        height: 20px;
+        left: 0px;
+    }
+    
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adivinador de tipos Pokémon</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Adivinador de tipos</h1>
+    <div class="container">
+        <div class="column">
+            <div id="tipos"></div>
+            <div>
+                <label for="eficacia">Eficacia: </label>
+                <select id="eficacia">
+                    <option value="0">Inmune</option>
+                    <option value="0.5">Poco eficaz</option>
+                    <option value="1" selected>Neutral</option>
+                    <option value="2">Super eficaz</option>
+                </select>
+                <button id="buscar">Buscar</button>
+                <button id="reiniciar">Reiniciar</button>
+            </div>
+        </div>
+        <div class="column" id="resultados">
+            <!-- Los resultados se mostrarán aquí -->
+        </div>
+    </div>
+    <script src="codigo.js"></script>
+</body>
+</html>
