@@ -172,9 +172,9 @@ option[disabled] {
     color: #b8b8b8;
 }
 
-/* body {
+body {
     font-size: 100%;
-} */
+}
 
 /* Media query para dispositivos con pantalla de hasta 600px de ancho */
 @media only screen and (max-width: 600px) {
