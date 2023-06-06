@@ -43,15 +43,8 @@ fetch('tipos.json')
                     const eficaciaTipo1 = data[tipo1].eficacia[tipoSeleccionado];
                     const eficaciaTipo2 = data[tipo2].eficacia[tipoSeleccionado];
                     const eficaciaTotal = eficaciaTipo1 * eficaciaTipo2;
-                    
-                    if(eficaciaTotal < 1 && eficaciaTotal > 0){
-                        eficaciaTotal = "0.5"
-                    }
-                    
-                    if(eficaciaTotal > 2){
-                        eficaciaTotal = "2"
-                    }
-                    
+             
+                    console.log(eficaciaTotal +"==="+ eficaciaSeleccionada)         
                     return eficaciaTotal === eficaciaSeleccionada;
                 })) {
                     const p = document.createElement('p');
