@@ -45,11 +45,11 @@ fetch('tipos.json')
                     const eficaciaTotal = eficaciaTipo1 * eficaciaTipo2;
                     
                     if(eficaciaTotal < 1 && eficaciaTotal > 0){
-                        eficaciaTotal = 0.5
+                        eficaciaTotal = "0.5"
                     }
                     
                     if(eficaciaTotal > 2){
-                        eficaciaTotal=2
+                        eficaciaTotal = "2"
                     }
                     
                     return eficaciaTotal === eficaciaSeleccionada;
