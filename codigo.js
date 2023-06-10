@@ -51,7 +51,7 @@ fetch('tipos.json')
                         eficaciaTotal = 0.5
                     }
                     
-                    console.log(tipo1 +"/"+tipo2+":eficacia total = "eficaciaTotal +"; eficacia seleccionada="+ eficaciaSeleccionada)
+                    console.log(tipo1 +"/"+tipo2+":eficacia total = "+eficaciaTotal +"; eficacia seleccionada="+ eficaciaSeleccionada)
                     return eficaciaTotal === eficaciaSeleccionada;
                 })) {
                     const p = document.createElement('p');
