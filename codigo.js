@@ -49,7 +49,7 @@ fetch('tipos.json')
                         eficaciaTotal = 2
                     }
                     if(eficaciaTotal == 0.25){
-                        eficaciaTotal = 0.5
+                        eficaciaTotal = "0.5"
                     }
                     return eficaciaTotal === eficaciaSeleccionada;
                 })) {
