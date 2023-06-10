@@ -42,14 +42,14 @@ fetch('tipos.json')
                 if (tiposSeleccionados.every(tipoSeleccionado => {
                     const eficaciaTipo1 = data[tipo1].eficacia[tipoSeleccionado];
                     const eficaciaTipo2 = data[tipo2].eficacia[tipoSeleccionado];
-                    const eficaciaTotal = eficaciaTipo1 * eficaciaTipo2;
+                    var eficaciaTotal = eficaciaTipo1 * eficaciaTipo2;
              
                     console.log(eficaciaTotal +"==="+ eficaciaSeleccionada)
                     if(eficaciaTotal == 4){
                         eficaciaTotal = 2
                     }
                     if(eficaciaTotal == 0.25){
-                        eficaciaTotal = "0.5"
+                        eficaciaTotal = 0.5
                     }
                     return eficaciaTotal === eficaciaSeleccionada;
                 })) {
